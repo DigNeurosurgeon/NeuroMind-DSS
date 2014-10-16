@@ -36,7 +36,7 @@ begin_page_content('tlics_score', 'TLICS score');
 			case 'indeterminate':
 				$plc = 2;
 				break;
-			case 'disrupted':
+			case 'injured':
 				$plc = 3;
 				break;	
 		}
@@ -85,9 +85,8 @@ begin_page_content('tlics_score', 'TLICS score');
 		/* summarize input */
 		$riskFactors  = '<p>based on these parameters: <ul>'; 
 		$riskFactors .= '<li>Morphology: ' . $_POST['morphology'] . '</li>';
-		$riskFactors .= '<li>DLC: ' . $_POST['dlc'] . '</li>';
+		$riskFactors .= '<li>PLC: ' . $_POST['plc'] . '</li>';
 		$riskFactors .= '<li>Neurol status: ' . $_POST['neurol'] . '</li>';
-		$riskFactors .= '<li>Continuous compression: ' . $cont_compr . '</li>';
 		$riskFactors .= '</ul></p>';
 		echo $riskFactors;
 		

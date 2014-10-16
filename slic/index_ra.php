@@ -87,7 +87,6 @@ begin_page_content('slic_score', 'SLIC score');
 		$riskFactors .= '<li>Morphology: ' . $_POST['morphology'] . '</li>';
 		$riskFactors .= '<li>DLC: ' . $_POST['dlc'] . '</li>';
 		$riskFactors .= '<li>Neurol status: ' . $_POST['neurol'] . '</li>';
-		$riskFactors .= '<li>Continuous compression: ' . $cont_compr . '</li>';
 		$riskFactors .= '</ul></p>';
 		echo $riskFactors;
 		

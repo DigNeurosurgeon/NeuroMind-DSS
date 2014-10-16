@@ -15,16 +15,16 @@ begin_page_content('risk_assessment', 'Success rate');
 			case 'lessthan1month':
 				$age = 0;
 				break;
-			case 'lessthan1month':
+			case '1month_6months':
 				$age = 10;
 				break;
-			case 'lessthan1month':
+			case '6months_1year':
 				$age = 30;
 				break;
-			case 'lessthan1month':
+			case '1year_10years':
 				$age = 40;
 				break;
-			case 'lessthan1month':
+			case 'morethan10years':
 				$age = 50;
 				break;
 			
@@ -62,17 +62,18 @@ begin_page_content('risk_assessment', 'Success rate');
 		
 		/* generate advise */
 		if ($sum_score <= 30) {					// lowest
-			$etv_success_rate = '0 - 0.25';
+			$etv_success_percentage = '0 - 25';
 			
 		} else if ($sum_score >= 70) {			// highest
-			$etv_success_rate = '0.7 - 0.9';
+			$etv_success_percentage = '70 - 90';
 			
 		} else {								// middle
-			$etv_success_rate = '0.45 - 0.55';
+			$etv_success_percentage = '45 - 55';
 		}
 		
 		/* give output to user */
-		add_paragraph('<h3>Estimated ETV success rate is: ' . $etv_success_rate . '%</h3>');
+        //add_paragraph('Sum score: ' . $sum_score);
+		add_paragraph('<h3>Estimated ETV success is: ' . $etv_success_percentage . '%</h3>');
 
 		
 		/* summarize input */
